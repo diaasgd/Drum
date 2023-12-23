@@ -2,11 +2,15 @@ var dBtn = document.querySelectorAll(".drum").length;
 for (var i=0; i<dBtn; i++) {
    
    document.querySelectorAll(".drum")[i].addEventListener("click", function () {
-   keyName(this.innerHTML)});
+   keyName(this.innerHTML);
+   animate(this.innerHTML);
+   });
    
    document.addEventListener("keypress", function (event) {
-        keyName(event.key);});
-
+        keyName(event.key);
+        animate(event.key);
+   });
+}
 
         function keyName(name) {
       switch (name) {
@@ -41,4 +45,11 @@ for (var i=0; i<dBtn; i++) {
          default: console.log(keyName);
       }
      }
+function animate(keyShow) {
+   var show = document.querySelector("." + touch3);
+   show.classList.add("pressed");
+   setTimeOut(function(){
+      show.classList.remove("pressed");
+   }, 100);
+}
 }
