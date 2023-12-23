@@ -48,7 +48,7 @@ for (var i=0; i<dBtn; i++) {
 function animate(keyShow) {
    var show = document.querySelector("." + keyShow);
    show.classList.add("pressed");
-   setTimeout (function(){
+   setTimeout (function() {
       show.classList.remove("pressed");
    }, 100);
 }
