@@ -46,9 +46,9 @@ for (var i=0; i<dBtn; i++) {
      }
 }
 function animate(keyShow) {
-   var show = document.querySelector("." + touch3);
+   var show = document.querySelector("." + keyShow);
    show.classList.add("pressed");
-   setTimeOut(function(){
+   setTimeout (function(){
       show.classList.remove("pressed");
    }, 100);
 }
