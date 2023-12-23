@@ -10,7 +10,6 @@ for (var i=0; i<dBtn; i++) {
         keyName(event.key);
         animate(event.key);
    });
-}
 
         function keyName(name) {
       switch (name) {
@@ -45,11 +44,11 @@ for (var i=0; i<dBtn; i++) {
          default: console.log(keyName);
       }
      }
+}
 function animate(keyShow) {
    var show = document.querySelector("." + touch3);
    show.classList.add("pressed");
    setTimeOut(function(){
       show.classList.remove("pressed");
    }, 100);
-}
 }
